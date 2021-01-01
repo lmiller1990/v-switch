@@ -108,7 +108,7 @@ There are three builds available.
 
 - `dist/v-switch.cjs,js`: for SSR in node.js (using `require`)
 - `dist/v-switch.esm-bundler.js`: for bundlers like Webpack and Rollup
-  - also works as an ES module in the browser using `<script type="module">
+  - also works as an ES module in the browser using `<script type="module">`
 - `dist/v-switch.browser.js`: global build (iife)
 
 Type definitions are also included.
@@ -117,7 +117,10 @@ Generally your build tool will be able to figure out which bundle to use, but yo
 
 ## Other
 
-I recorded a YouTube video on building this little component: https://youtu.be/KPV6-H6-IxM
+I recorded some content for my YouTube channel relating to this component:
+
+- Building the component: https://youtu.be/KPV6-H6-IxM 
+- Building for production and publishing it on npm: https://youtu.be/KwoO2afF5cg
 
 ## License
 
