@@ -1,6 +1,6 @@
 {
   "name": "@lmiller1990/v-switch",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "./dist/v-switch.cjs.js",
   "module": "./dist/v-switch.esm-bundler.js",
   "browser": "./dist/v-switch.browser.js",
