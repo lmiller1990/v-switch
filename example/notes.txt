@@ -1,0 +1,12 @@
+  <v-switch :case="number">
+    <template 
+      v-for="num in numbers" 
+      v-slot:[num] 
+      :key="num"
+    >
+      <h4>{{ num }}</h4>
+    </template>
+    <template #default>
+      Default
+    </template>
+  </v-switch>
