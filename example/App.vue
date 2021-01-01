@@ -19,7 +19,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
-import { VSwitch } from './v-switch'
+import VSwitch from '../dist/v-switch.esm-bundler'
 
 export default defineComponent({
   components: {

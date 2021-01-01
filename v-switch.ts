@@ -1,6 +1,6 @@
 import { defineComponent, h, computed } from 'vue'
 
-export const VSwitch = defineComponent({
+export default defineComponent({
   props: {
     case: {
       type: [String, Number]
@@ -10,7 +10,7 @@ export const VSwitch = defineComponent({
   setup(props, { slots } ) {
     return () => computed(() => {
       if (props.case && slots[props.case]) {
-        return h(slots[props.case])
+        return h(slots[props.case]!)
       }
 
       if (slots.default) {

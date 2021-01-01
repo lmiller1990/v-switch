@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="/dist/v-switch.browser.js"></script>
+</head>
+<body>
+  <div id="app">
+
+  </div> 
+
+  <script>
+    const App = {
+      template: `
+        <button @click="changeNumber">Change</button>
+        <button @click="number = 10">Change to 10</button>
+        {{ number }}
+
+        <v-switch :case="number">
+          <template 
+            v-for="num in numbers"
+            v-slot:[num]
+          >
+            Number: {{ num }}
+          </template>
+
+          <template #default>
+            Default
+          </template>
+        </v-switch>
+      `,
+
+      setup() {
+        const number = Vue.ref(1)
+        const numbers = [1,2,3,4,5]
+
+        const changeNumber = () => {
+          const rand = Math.ceil(Math.random() * 5)
+          number.value = rand
+        }
+
+        return {
+          changeNumber,
+          number,
+          numbers
+        }
+      }
+    }
+
+    console.log(VSwitch)
+    const app = Vue.createApp(App)
+    app.component('VSwitch', VSwitch)
+    app.mount('#app')
+  </script>
+</body>
+</html>
