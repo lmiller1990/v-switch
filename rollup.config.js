@@ -2,8 +2,6 @@ import ts from 'rollup-plugin-typescript2'
 import pkg from './package.json'
 
 function createEntry(options) {
-  console.log(options.format)
-
   const config = {
     input: './v-switch.ts',
     external: [
@@ -25,8 +23,8 @@ function createEntry(options) {
           compilerOptions: {
             declaration: options.format === 'es',
           },
-        exclude: ['src', 'example']
-      }
+          exclude: ['src', 'example']
+        }
       })
     ]
   }
