@@ -5,9 +5,9 @@ A `<VSwitch>` component for Vue.js 3.
 ## Installation
 
 ```sh
-yarn install @lmiller1990/v-switch`
+yarn install @lmiller1990/v-switch
 
-npm install @lmiller1990/v-switch`
+npm install @lmiller1990/v-switch
 ```
 
 ## Usage
@@ -31,7 +31,7 @@ npm install @lmiller1990/v-switch`
   </v-switch>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent, ref } from 'vue'
 import VSwitch from '@lmiller1990/v-switch'
 
