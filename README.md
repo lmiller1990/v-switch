@@ -115,6 +115,10 @@ Type definitions are also included.
 
 Generally your build tool will be able to figure out which bundle to use, but you can be explicit if you need to.
 
+## Other
+
+I recorded a YouTube video on building this little component: https://youtu.be/KPV6-H6-IxM
+
 ## License
 
 MIT
