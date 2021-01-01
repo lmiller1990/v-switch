@@ -10,3 +10,43 @@
       Default
     </template>
   </v-switch>
+
+
+<template>
+  <button @click="size = 'big'">Big</button>
+  <button @click="size = 'small'">Small</button>
+  <button @click="size = 'invalid'">Invalid</button>
+
+  <v-switch :case="size">
+    <template #big>
+      Big
+    </template>
+
+    <template #small>
+      Small
+    </template>
+
+    <template #default>
+      Default
+    </template>
+  </v-switch>
+</template>
+
+<script lang="ts">
+import { defineComponent, ref } from 'vue'
+import { VSwitch } from './v-switch'
+
+export default defineComponent({
+  components: {
+    VSwitch
+  },
+
+  setup() {
+    const size = ref<'small' | 'big' | 'invalid'>('small')
+
+    return {
+      size,
+    }
+  }
+})
+</script>

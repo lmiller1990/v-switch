@@ -1,22 +1,23 @@
-import { computed, defineComponent, Directive, DirectiveBinding, h, isVNode, VNode, VNodeArrayChildren, VNodeNormalizedChildren, VNodeChild, Fragment } from 'vue'
+import { defineComponent, h, computed } from 'vue'
 
 export const VSwitch = defineComponent({
-  name: 'v-switch',
   props: {
     case: {
       type: [String, Number]
     }
   },
-  setup(props, { slots }) {
+  // () => h(...)
+  setup(props, { slots } ) {
     return () => computed(() => {
       if (props.case && slots[props.case]) {
-        return h(() => slots[props.case]())
+        return h(slots[props.case])
       }
 
-      if (props.case && slots.default) {
-        return h(() => slots.default())
+      if (slots.default) {
+        return h(slots.default)
       }
-      return []
+
+      return h('div')
     }).value
   }
 })

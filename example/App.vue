@@ -1,21 +1,20 @@
 <template>
-  <button @click="changeNumber">Random number (1-10)</button>
-  <button @click="number = 11">Set to 11 (invalid)</button>
-  <p>Current: {{ number }}</p>
+  <button @click="changeNumber">Change</button>
+  <button @click="number = 10">Change to 10</button>
+  {{ number }}
 
   <v-switch :case="number">
     <template 
-      v-for="num in numbers" 
-      v-slot:[num] 
-      :key="num"
+      v-for="num in numbers"
+      v-slot:[num]
     >
-      <h4>{{ num }}</h4>
+      Number: {{ num }}
     </template>
+
     <template #default>
       Default
     </template>
   </v-switch>
-
 </template>
 
 <script lang="ts">
@@ -28,19 +27,18 @@ export default defineComponent({
   },
 
   setup() {
-    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     const number = ref(1)
+    const numbers = [1,2,3,4,5]
+
     const changeNumber = () => {
       const rand = Math.ceil(Math.random() * 5)
-      number.value = numbers[rand]
+      number.value = rand
     }
 
-    const size = ref<'small' | 'big' | 'invalid'>('small')
     return {
-      size,
-      numbers,
+      changeNumber,
       number,
-      changeNumber
+      numbers
     }
   }
 })
