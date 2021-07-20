@@ -5,7 +5,7 @@ A `<VSwitch>` component for Vue.js 3.
 ## Installation
 
 ```sh
-yarn install @lmiller1990/v-switch
+yarn add @lmiller1990/v-switch
 
 npm install @lmiller1990/v-switch
 ```
