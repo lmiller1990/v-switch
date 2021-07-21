@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "./dist/v-switch.cjs.js",
   "module": "./dist/v-switch.esm-bundler.js",
-  "browser": "./dist/v-switch.browser.js",
   "unpkg": "./dist/v-switch.browser.js",
   "license": "MIT",
   "devDependencies": {
