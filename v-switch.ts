@@ -6,7 +6,6 @@ export default defineComponent({
       type: [String, Number]
     }
   },
-  // () => h(...)
   setup(props, { slots } ) {
     return () => computed(() => {
       if (props.case && slots[props.case]) {
